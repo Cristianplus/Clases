@@ -71,3 +71,46 @@ my_stack.print()
 print(f"9) se ha eliminado el elemento: {my_stack.pop()} de la pila")
 print(f"10) se ha eliminado el elemento: {my_stack.pop()} de la pila")
 print(f"11) los elementos de la pila son: {my_stack.count()}")
+
+print("---------COLA----------")
+
+class Queue:
+
+    def __init__(self):
+        self.queue = []
+
+    def equeue(self, item):
+        self.queue.append(item)
+
+    def deequeue(self):
+        if self.count() == 0:
+            return None
+        return self.queue.pop(0)
+
+    def count(self):
+        if len(self.queue) == 0:
+            return 0
+        else:
+            return len(self.queue)
+
+    def print(self):
+        for item in (self.queue):
+            print(item)
+
+my_queue = Queue()
+my_queue.equeue("A")
+my_queue.equeue("B")
+my_queue.equeue("C")
+print("Elementos en la cola son:")
+my_queue.print()
+print(f"1) tienes {my_queue.count()} elementos en la cola")
+print(f"2) se ha eliminado el elemento {my_queue.deequeue()} de la cola")
+print(f"3) se ha eliminado el elemento {my_queue.deequeue()} de la cola")
+print(f"4) se ha elimiando el elemento {my_queue.deequeue()} de la cola")
+print("Elementos en la cola son:")
+my_queue.print()
+print(f"5) tienes {my_queue.count()} elementos en la cola")
+my_queue.equeue("D")
+print("6) se ha añadido el elemento D a la cola")
+print("Los elementos en la cola son:")
+my_queue.print()
